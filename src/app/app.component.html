@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="first-column">
+    <input type="number" min="1" [value]="number" (change)="change($event)" />
+  </div>
+
+  <div class="second-column">
+    <select style="width: 100px;" [value]="selectedFunction" (change)="selectFunction($event)">
+      <option value="isPrime">isPrime</option>
+      <option value="isFibonacci">isFibonacci</option>
+  </select>
+  </div>
+
+  <div class="third-column">
+    <div *ngIf="selectedFunction == 'isPrime'">{{isPrime()}}</div>
+    <div *ngIf="selectedFunction == 'isFibonacci'">{{isFibonacci()}}</div>
+  </div>
+</div>
+
+

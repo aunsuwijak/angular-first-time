@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px auto 300px;
+  min-height: 100vh;
+}
+
+.first-column {
+  border: 1px solid #eee;
+}
+
+.second-column {
+  min-width: 100px;
+  border: 1px solid #eee;
+}
+
+@media only screen and (max-width: 600px) {
+  .second-column {
+    min-width: unset;
+    overflow: scroll;
+  }
+}
+
+.third-column {
+  border: 1px solid #eee;
+}
